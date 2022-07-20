@@ -1,5 +1,5 @@
 Java:
-```
+```java
 class Solution {
     public int maximumWealth(int[][] accounts) {
         int richest = 0, sum = 0;
