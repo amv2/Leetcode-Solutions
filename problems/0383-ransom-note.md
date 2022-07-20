@@ -2,7 +2,7 @@ Java:
 ```java
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
-        // use a letter array
+        // use an array as a hashmap <letter, frequency>
         int[] map = new int[26];
         // get the frequency of each letter in ransomNote
         for (int i = 0; i < magazine.length(); i++)
