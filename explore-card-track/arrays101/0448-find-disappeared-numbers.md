@@ -16,7 +16,7 @@ class Solution {
         
         // loop through the frequencies
         for (int i=1; i<freq.length; i++)
-            // add to the list
+            // add to list if current number is not in nums
             if (freq[i] == 0) 
                 result.addLast(i);
         
