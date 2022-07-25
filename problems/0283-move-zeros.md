@@ -7,9 +7,7 @@ class Solution {
         for (n = 0; n<nums.length; n++) {
             // for non zero numbers, swap with a zero number
             if (nums[n] != 0) {
-                int temp = nums[z];
-                nums[z] = nums[n];
-                nums[n] = temp;
+                nums[z] = nums[z]^nums[n]^(nums[n] = nums[z]);
                 z++; // incremenet zero pointer
             }
         }
