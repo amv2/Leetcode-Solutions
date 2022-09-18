@@ -3,12 +3,12 @@ Rust
 use std::cmp::Ordering::*;
 impl Solution {
     pub fn search_matrix(matrix: Vec<Vec<i32>>, target: i32) -> bool {
-        let (mut x, mut y) = (0i32, (matrix[0].len()-1) as i32);
-        while x <= (matrix.len() - 1) as i32 && y >= 0 {
-            match matrix[x as usize][y as usize].cmp(&target) {
+        let (mut r, mut c) = (0i32, (matrix[0].len()-1) as i32);
+        while r <= (matrix.len() - 1) as i32 && c >= 0 {
+            match matrix[r as usize][c as usize].cmp(&target) {
                 Equal => return true,
-                Less => x += 1,
-                Greater => y -= 1,
+                Less => r += 1,
+                Greater => c -= 1,
             }
         }
         false
